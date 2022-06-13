@@ -1,0 +1,41 @@
+doctype html
+
+html(lang="en")
+    head
+        script(defer src="script.js")
+        link(rel="stylesheet" href="style.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet")
+        title Don't Die
+
+    body
+        //Header
+        div(class="h1--back-color")
+            h1 Don't Die
+        div(class="sep--line")
+            div(class="day--counter-div")
+                p(class="day--counter") Day 1
+
+        //Game
+        div(class="buttons--div")
+            div(class="player--option-1_div player--option")
+                p(class="player--option-1") Fight
+            div(class="player--option-2_div player--option")
+                p(class="player--option-2") Run
+        div(class="player--area")
+            div(class="display--body")
+                div(class="player--debuffs-div")
+                    p(class="player--debuffs") Debuffs
+                    ul(class="player--debuffs-list")
+                        li Broken Legs
+                        li Broken Arm
+                        li Internal Bleeding
+                div(class="player--div")
+                    p(class="player--event") Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid inventore eos voluptate nihil laudantium deserunt exercitationem nulla nisi impedit quae modi necessitatibus obcaecati, aliquam enim, excepturi suscipit veritatis soluta dicta.
+                div(class="equipment--tracker-div")
+                    p(class="player--equipment") Equipment
+                    ul(class="player--equipment-list")
+                        li Axe
+                        li Gun
+                        li Medkit
