@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 
 body {
   font-family: "Ubuntu", sans-serif;
   background: #2e2e2e;
+  position: relative;
 }
 
 h1 {
@@ -15,15 +17,11 @@ h1 {
   text-align: center;
 }
 
-.hidden {
-  display: none;
-}
-
 .h1--back-color {
   background-color: #ffffff;
   border-radius: 5px 100px;
   padding: 40px 30px;
-  width: 450px;
+  width: 500px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -38,7 +36,7 @@ h1 {
   position: relative;
 }
 
-.day--counter-div {
+.start--game {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -49,11 +47,32 @@ h1 {
   bottom: -55px;
   right: 45%;
   border-radius: 20px;
+  font-size: 46px;
 }
 
 .day--counter {
   font-size: 50px;
   color: #2e2e2e;
+}
+
+.start--button {
+  color: #2e2e2e;
+}
+
+.start--game:hover {
+  font-size: 50px;
+}
+
+.start--game:active {
+  font-size: 46px;
+}
+
+.button--how {
+  margin: 100px auto;
+  height: 50px;
+  width: 300px;
+  padding: 10px 30px;
+  text-align: center;
 }
 
 .buttons--div {
@@ -64,16 +83,25 @@ h1 {
 }
 
 .player--option-1,
-.player--option-2 {
+.player--option-2,
+.button--how-to-play {
   color: #2e2e2e;
   font-size: 26px;
 }
 
-.player--option:hover {
+.player--option:hover,
+.button--how:hover {
   cursor: pointer;
+  transform: scale(1.05);
 }
 
-.player--option {
+.player--option:active,
+.button--how:active {
+  transform: scale(1);
+}
+
+.player--option,
+.btn--how-to-play {
   background-color: #fff;
   padding: 10px 30px;
   border-radius: 30px;
@@ -121,10 +149,86 @@ h1 {
   font-size: 26px;
 }
 
+.overlay {
+  position: absolute;
+  top: -105px;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background-color: #00000099;
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal--window {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: #6e6e6ed5;
+  padding: 40px 120px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.modal--content {
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+.close--modal {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  font-size: 40px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.close--modal:hover {
+  transform: scale(1.1);
+}
+
+.close--modal:active {
+  transform: scale(1);
+}
+
+.modal--text {
+  font-size: 24px;
+}
+
 li {
   margin-bottom: 10px;
 }
 
 li:last-child {
   margin-bottom: 0;
+}
+
+footer {
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  bottom: -485px;
+  right: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.hover {
+  cursor: pointer;
 }
